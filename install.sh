@@ -74,11 +74,11 @@ apt remove ruby -y &>/dev/null
 apt autoremove -y &>/dev/null
 rm -rf $PREFIX/lib/ruby/gems/$rubver
 echo "Installing Ruby Version 2.7..."
-bash <(curl -fsSL "https://git.io/abhacker-repo") --install ruby=2.7.2 &>/dev/null
+bash <(curl -fsSL "https://git.io/abhacker-repo") --install ruby=2.7.2 --allow-unauthenticated &>/dev/null
 else
 echo "Ruby not Found!"
 echo "Installing Ruby Version 2.7..."
-bash <(curl -fsSL "https://git.io/abhacker-repo") --install ruby=2.7.2 &>/dev/null
+bash <(curl -fsSL "https://git.io/abhacker-repo") --install ruby=2.7.2 --allow-unauthenticated &>/dev/null
 fi
 echo
 echo "[*] Checking postgres..."
