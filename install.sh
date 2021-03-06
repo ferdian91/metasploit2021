@@ -12,7 +12,7 @@ echo "Created by Ferdian™"
 echo
 sleep 1
 echo "Checking Package..."
-pkg install -y ncurses-utils wget &>/dev/null
+pkg install ncurses-utils wget -y &>/dev/null
 tput cuu1
 tput el
 sleep 1
@@ -87,7 +87,7 @@ if [[ -e $BIN/postgres ]]; then
 echo "Postgres Found..."
 else
 echo "Installing Postgres..."
-pkg install postgresql &>/dev/null
+pkg install postgresql -y &>/dev/null
 fi
 sleep 1
 echo "Removing Folder postgresql..."
