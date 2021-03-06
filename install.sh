@@ -87,7 +87,7 @@ if [[ -e $BIN/postgres ]]; then
 echo "Postgres Found..."
 else
 echo "Installing Postgres..."
-pkg install postgres &>/dev/null
+pkg install postgresql &>/dev/null
 fi
 sleep 1
 echo "Removing Folder postgresql..."
@@ -130,6 +130,7 @@ bundle install --jobs=2 --verbose &>/dev/null
 
 tput cup 7 0
 tput ed
+echo
 echo "Running fixes..."
 sed -i "s@/etc/resolv.conf@$PREFIX/etc/resolv.conf@g" "$PREFIX"/opt/metasploit-framework/lib/net/dns/resolver.rb
 find "$PREFIX"/opt/metasploit-framework -type f -executable -print0 | xargs -0 -r termux-fix-shebang
@@ -175,6 +176,7 @@ echo
 echo "[*] Everything Done."
 echo "[*] Metasploit Framework installation Finished."
 echo "[*] ...Script by Ferdian™..."
+echo
 echo "Running msfconsole now.."
 
 msfconsole
