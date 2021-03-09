@@ -12,7 +12,7 @@ echo "Created by Ferdian™"
 echo
 sleep 1
 echo "Checking Package..."
-pkg install -y libpcap termux-elf-cleaner ncurses-utils libxslt wget &>/dev/null
+pkg install -y libiconv zlib autoconf bison clang coreutils curl findutils apr apr-util libffi libgmp libpcap readline libsqlite openssl libtool libxml2 libxslt pkg-config make libgrpc termux-tools ncurses-utils zip termux-elf-cleaner ncurses-utils libxslt wget &>/dev/null
 tput cuu1
 tput el
 sleep 1
@@ -42,7 +42,7 @@ echo "[*] Downloading Metasploit..."
 wget https://github.com/rapid7/metasploit-framework/archive/$MS.tar.gz &>/dev/null & PID=$!
 while kill -0 $PID 2>/dev/null; do 
     printf  "▓"
-    sleep 2
+    sleep 1
 done
 echo
 echo
