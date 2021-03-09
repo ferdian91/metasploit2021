@@ -12,7 +12,7 @@ echo "Created by Ferdian™"
 echo
 sleep 1
 echo "Checking Package..."
-pkg install ncurses-utils wget -y &>/dev/null
+pkg install -y libpcap termux-elf-cleaner ncurses-utils libxslt wget &>/dev/null
 tput cuu1
 tput el
 sleep 1
