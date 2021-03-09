@@ -12,7 +12,11 @@ echo "Created by Ferdian™"
 echo
 sleep 1
 echo "Checking Package..."
-pkg install -y libiconv zlib autoconf bison clang coreutils curl findutils apr apr-util libffi libgmp libpcap readline libsqlite openssl libtool libxml2 libxslt pkg-config make libgrpc termux-tools ncurses-utils zip termux-elf-cleaner ncurses-utils libxslt wget &>/dev/null
+echo
+sleep 1
+echo "Installing  some package..."
+echo "wait a moment..."
+pkg install -y libpcap termux-elf-cleaner ncurses-utils libxslt wget
 tput cuu1
 tput el
 sleep 1
