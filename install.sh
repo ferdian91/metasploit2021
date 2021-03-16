@@ -17,8 +17,8 @@ sleep 1
 echo "Installing  some package..."
 echo "wait a moment..."
 pkg install -y libpcap termux-elf-cleaner ncurses-utils libxslt wget &>/dev/null
-tput cuu1
-tput el
+tput cup 6 0
+tput ed
 sleep 1
 printf " Starting...  "
 for load in $(seq 1 15); do
@@ -174,6 +174,7 @@ fi
 if [ -e $BIN/msfvenom ];then
 	rm $BIN/msfvenom
 fi
+rm $TMPDIR/$MS.tar.gz
 ln -s $PREFIX/opt/metasploit-framework/msfconsole $BIN
 ln -s $PREFIX/opt/metasploit-framework/msfvenom $BIN
 echo
